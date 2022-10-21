@@ -32,6 +32,7 @@ DataV is a Vue-based data visualization component library that provides SVG bord
 # Deficiencies in the system
 - The system still has flaws in data acquisition and cannot obtain all data. For example, some provinces do not provide downloads of statistical yearbooks. Because the older xlrd library is used when crawling the statistical yearbook, because the latest openpyxl supports the latest xlsx format, and with the gradual elimination of the xp system from various office scenarios, the old file format of Microsoft office suite is no longer Applicable to the current environment. If the format of the statistical yearbook is changed in the future, the specific program of the current crawler needs to be rewritten, but the availability of openpyxl is very high, and the use of the new library will greatly improve the accuracy and maintainability of the crawler, although due to the characteristics of this library, the file loading may be more xlrd takes longer.
 - For example:
+  
   This is part of the code of the current crawling algorithm:
   ```
   ifself.wb.xf_list[self.tb.cell_xf_index(rx,0)].backdround.pattern_colour_index==44
