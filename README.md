@@ -37,7 +37,9 @@ DataV is a Vue-based data visualization component library that provides SVG bord
   ```
   ifself.wb.xf_list[self.tb.cell_xf_index(rx,0)].backdround.pattern_colour_index==44
   ```
-  The significance of this part is to verify whether the current row is the row where the column header is located. The principle is to determine whether the background color of the current row is blue. It can be seen that the positioning of the cell position in the first half is very complicated and unintuitive, and the '44' at the end of the line is even more unclear. But with the new library you can change to:
+  The significance of this part is to verify whether the current row is the row where the column header is located. The principle is to determine whether the background color of the current row is blue. It can be seen that the positioning of the cell position in the first half is very complicated and unintuitive, and the '44' at the end of the line is even more unclear. 
+  
+  But with the new library you can change to:
   ```
   if sele.tb[f’A{rx}’].fill.start_color==colors.Blue:
   ```
