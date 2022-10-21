@@ -31,7 +31,8 @@ DataV is a Vue-based data visualization component library that provides SVG bord
 
 # Deficiencies in the system
 - The system still has flaws in data acquisition and cannot obtain all data. For example, some provinces do not provide downloads of statistical yearbooks. Because the older xlrd library is used when crawling the statistical yearbook, because the latest openpyxl supports the latest xlsx format, and with the gradual elimination of the xp system from various office scenarios, the old file format of Microsoft office suite is no longer Applicable to the current environment. If the format of the statistical yearbook is changed in the future, the specific program of the current crawler needs to be rewritten, but the availability of openpyxl is very high, and the use of the new library will greatly improve the accuracy and maintainability of the crawler, although due to the characteristics of this library, the file loading may be more xlrd takes longer.
-- For example:
+  
+  For example:
   
   This is part of the code of the current crawling algorithm:
   ```
@@ -44,3 +45,5 @@ DataV is a Vue-based data visualization component library that provides SVG bord
   if sele.tb[f’A{rx}’].fill.start_color==colors.Blue:
   ```
   Obviously, compared with the above, it is more concise: use the positioning method of excel (ie column-row combination, format string in the figure), and the color is preset by the openpyxl library, which can be called directly.
+
+- Without using OpenID when logging in, the login interface is actually not secure. Although the UUID is used as the user's primary key in the database and the interface authentication field, when the UUID is stolen, as long as the user is logged in in the database, the intruder can use this UUID to log in to the system. If OpenID is used, every time you log in to the system, the front-end interface authentication field given to a specific user will have an expiration date, so that it will expire when the session ends, or it will be valid for a certain period of time. The above problems can be avoided. Flask provides functional expansion, which can be achieved by using flask-OpenID. However, since the above-mentioned verification method has been used, the front-end and back-end are highly integrated, and it is not easy to carry out transformation, so this project does not use OpenID for login verification.
