@@ -24,4 +24,4 @@ Flask is a "micro" framework for web development based on Python. The form of mi
 <h3>DataV</h3>
 DataV is a Vue-based data visualization component library that provides SVG borders and decorations to enhance the visual effect of the page
 
-- The documents about DataV could be checked in https://github.com/DataV-Team/Datav 
+> The documents about DataV could be checked in https://github.com/DataV-Team/Datav 
