@@ -19,8 +19,8 @@ class mum:
 items=soup.findAll('span',{'class':'lbx'})
 mum=[]
 for item in items:
-  title=item.find_all('a').text#标题
-  link=item.find_all('a').get('href')#链接
+  title=item.find_all('a').text #title
+  link=item.find_all('a').get('href') #link
   m=mum(title,link)
   mums.append(m)
 file_name=guizhou.csv
