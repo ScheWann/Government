@@ -19,7 +19,7 @@ ECharts is a commercial-grade data chart, a pure Javascript chart library, which
 <h3>Flask</h3>
 Flask is a "micro" framework for web development based on Python. The form of micro-framework gives developers more choices. The purpose of using Flask in this project is to provide a JSON data interface for the front end. Since the server program uses Flask, the Flask project team provides the Flask-SqlAlchemy extension and is highly linked to SqlAlchemy, which greatly facilitates the development of the Flask server program.
 
-<h4> The documents about Echarts.js could be checked in https://echarts.apache.org/handbook/en/get-started/ </h4>
+<h6> The documents about Echarts.js could be checked in https://echarts.apache.org/handbook/en/get-started/ </h6>
 
 <h3>DataV</h3>
 DataV is a Vue-based data visualization component library that provides SVG borders and decorations to enhance the visual effect of the page
